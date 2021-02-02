@@ -14,7 +14,7 @@ function getForecast(cityInput) {
 
         var response = response
 
-    
+        console.log(response)
 
 
 
@@ -82,7 +82,7 @@ function getUV(lat, long) {
        
         
         $("#uv_index").text("UV Index: " + response.current.uvi);
-        // $("#weather-pict").attr("src", response.weather[0].icon)
+      
         
 
     })
@@ -106,8 +106,10 @@ $('#search').on("click", function () {
     getWeather(cityInput)
 
 
+    localStorage.setItem("count", cityInput)
 
-    //add call to search history (so set local storage)
+    $("history-btns").prepend("<button>" + cityInput)
+
 
 
 })
