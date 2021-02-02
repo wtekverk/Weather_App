@@ -14,7 +14,7 @@ function getForecast(cityInput) {
 
         var response = response
 
-        console.log(response)
+    
 
 
 
@@ -38,6 +38,8 @@ function getWeather(cityInput) {
 
         var response = response
 
+        console.log(response)
+
         var temp = (response.main.temp - 273.15) * 1.8 + 32
 
         $("#temperature").text("Temperature (F): " + temp.toFixed(2) + "°");
@@ -46,14 +48,14 @@ function getWeather(cityInput) {
         $("#city-name").text(response.name)
         $("#weather-pict").attr("src", response.weather.icon)
 
+        var iconCode = response.weather[0].icon;
+        var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+        $('#weather-pict').attr('src', iconURL);
 
 
         var lat = response.coord.lat
         var long = response.coord.lon
        
-        console.log(lat)
-        console.log(long)
-
         getUV(lat, long)
 
 
@@ -77,10 +79,10 @@ function getUV(lat, long) {
 
         var response = response
 
-        console.log(response)
+       
         
         $("#uv_index").text("UV Index: " + response.current.uvi);
-        $("#weather-pict").text(response.hourly.weather.icon)
+        // $("#weather-pict").attr("src", response.weather[0].icon)
         
 
     })
