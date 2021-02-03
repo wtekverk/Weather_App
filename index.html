@@ -14,7 +14,7 @@
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
     <!-- personal CSS link -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
 
 
 </head>
@@ -34,7 +34,7 @@
                 <h5 class="my-1">Search for a City:</h5>
                 <div class="input-group mb-4">
                     <input id="city-input" type="text" class="form-control" placeholder="City">
-                    <div class="input-group-append">
+                    <class class="input-group-append">
                         <button class=" bi-search btn btn-primary " type="button" id="search">
                             <!-- button search icon information from bootstraps-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -44,10 +44,9 @@
                             </svg>
                             <i class=" fa-search"></i>
                         </button>
-                    </div>
-                </div id='history_btns'>
-                <div>
-
+                    </class>
+                </div>
+                <div id='history_btn'>
                 </div>
             </aside>
 
@@ -87,15 +86,15 @@
 
                         <!-- UV Index information -->
                         <div class="row">
-                            <div class="col-6">
-                                <p id="uv_index"></p>
+                            <div class="col-6" id="uv_index">
+
                             </div>
                         </div>
-
+                        <br>
                         <div class="row">
 
                             <!-- five day forecast section -->
-                            <div class="col-12">
+                            <div class="col-12 border">
                                 <h3>5-Day Forecast:</h3>
                             </div>
                         </div>
@@ -109,73 +108,74 @@
                                         <div class="card-header text-white bg-primary" id="date1"">
 
                                         </div>
-                                        <ul class="list-group list-group-flush">
+                                        <ul class=" list-group list-group-flush">
                                             <li class="list-group-item text-white bg-primary">
                                                 <img id="icon1" alt="weather icon" />
                                             </li>
                                             <li class="list-group-item text-white bg-primary" id="temp1"></li>
                                             <li class="list-group-item text-white bg-primary" id="hum1"></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Daily Forecast 2 -->
-                                    <div class="card m-3 border" style="width: 18rem;">
-                                        <div class="card-header text-white bg-primary" id="date2">
-
+                                            </ul>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item text-white bg-primary">
-                                                <img id="icon2" alt="weather icon" />
-                                            </li>
-                                            <li class="list-group-item text-white bg-primary" id="temp2"></li>
-                                            <li class="list-group-item text-white bg-primary" id="hum2"></li>
-                                        </ul>
-                                    </div>
 
-                                    <!-- Daily Forecast 3 -->
-                                    <div class="card m-3 border card-style text-white bg-primary" style="width: 18rem;">
-                                        <div class="card-header" id="date3">
+                                        <!-- Daily Forecast 2 -->
+                                        <div class="card m-3 border" style="width: 18rem;">
+                                            <div class="card-header text-white bg-primary" id="date2">
 
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-white bg-primary">
+                                                    <img id="icon2" alt="weather icon" />
+                                                </li>
+                                                <li class="list-group-item text-white bg-primary" id="temp2"></li>
+                                                <li class="list-group-item text-white bg-primary" id="hum2"></li>
+                                            </ul>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item text-white bg-primary">
-                                                <img id="icon3" alt="weather icon" />
-                                            </li>
-                                            <li class="list-group-item text-white bg-primary" id="temp3"></li>
-                                            <li class="list-group-item text-white bg-primary" id="hum3"></li>
-                                        </ul>
-                                    </div>
 
-                                    <!-- Daily Forecast 4 -->
-                                    <div class="card m-3 border card-style" style="width: 18rem;">
-                                        <div class="card-header text-white bg-primary" id="date4">
+                                        <!-- Daily Forecast 3 -->
+                                        <div class="card m-3 border card-style text-white bg-primary"
+                                            style="width: 18rem;">
+                                            <div class="card-header" id="date3">
 
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-white bg-primary">
+                                                    <img id="icon3" alt="weather icon" />
+                                                </li>
+                                                <li class="list-group-item text-white bg-primary" id="temp3"></li>
+                                                <li class="list-group-item text-white bg-primary" id="hum3"></li>
+                                            </ul>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item text-white bg-primary">
-                                                <img id="icon4" alt="weather icon" />
-                                            </li>
-                                            <li class="list-group-item text-white bg-primary" id="temp4"></li>
-                                            <li class="list-group-item text-white bg-primary" id="hum4"></li>
-                                        </ul>
-                                    </div>
 
-                                    <!-- Daily Forecast 5 -->
-                                    <div class="card m-3 border card-style" style="width: 18rem;">
-                                        <div class="card-header text-white bg-primary" id="date5">
+                                        <!-- Daily Forecast 4 -->
+                                        <div class="card m-3 border card-style" style="width: 18rem;">
+                                            <div class="card-header text-white bg-primary" id="date4">
 
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-white bg-primary">
+                                                    <img id="icon4" alt="weather icon" />
+                                                </li>
+                                                <li class="list-group-item text-white bg-primary" id="temp4"></li>
+                                                <li class="list-group-item text-white bg-primary" id="hum4"></li>
+                                            </ul>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item text-white bg-primary">
-                                                <img id="icon5" alt="weather icon" />
-                                            </li>
-                                            <li class="list-group-item text-white bg-primary" id="temp5"></li>
-                                            <li class="list-group-item text-white bg-primary" id="hum5"></li>
-                                        </ul>
+
+                                        <!-- Daily Forecast 5 -->
+                                        <div class="card m-3 border card-style" style="width: 18rem;">
+                                            <div class="card-header text-white bg-primary" id="date5">
+
+                                            </div>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item text-white bg-primary">
+                                                    <img id="icon5" alt="weather icon" />
+                                                </li>
+                                                <li class="list-group-item text-white bg-primary" id="temp5"></li>
+                                                <li class="list-group-item text-white bg-primary" id="hum5"></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
             </content>
         </div>
     </div>
