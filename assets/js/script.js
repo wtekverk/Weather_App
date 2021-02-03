@@ -122,8 +122,16 @@ $(document).ready(function () {
         }).then(function (response) {
 
             var response = response
-          console.log(response)
+            console.log(response)
             $("#uv_index").text("UV Index: " + response.value);
+
+            if (response.value <= 3) {
+                $('#uv_index').attr("style", "color: green")
+            } else if (response.value > 3 && response.value <= 6) {
+                $('#uv_index').attr("style", "color: orange")
+            } else {
+                $('#uv_index').attr("style", "color: red")
+            }
 
         })
 
@@ -150,7 +158,7 @@ $(document).ready(function () {
         var previousSearch = JSON.parse(localStorage.getItem("city")) || [];
         var html = ''
         for (var i = 0; i < previousSearch.length; i++) {
-            html += `<button class = "btn btn-primary cityName">${previousSearch[i]}</button>`
+            html += `<button class = "btn btn-secondary border cityName" style="width: 100%">${previousSearch[i]}</button>`
         }
         console.log(html)
         $("#history_btn").html(html)
